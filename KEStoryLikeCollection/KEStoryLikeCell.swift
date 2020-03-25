@@ -1,14 +1,14 @@
 //
-//  StoryCell.swift
+//  KEStoryLikeCell.swift
 //  KEStoryLikeCollection
 //
-//  Created by Kaan Esin on 24.03.2020.
+//  Created by Kaan Esin on 25.03.2020.
 //  Copyright © 2020 Kaan Esin. All rights reserved.
 //
 
 import UIKit
 
-class StoryCell: UICollectionViewCell {
+class KEStoryLikeCell: UICollectionViewCell {
     @IBOutlet weak var imgCell: UIImageView!
     @IBOutlet weak var lblCell: UILabel!
     @IBOutlet weak var constraintYForImage: NSLayoutConstraint!

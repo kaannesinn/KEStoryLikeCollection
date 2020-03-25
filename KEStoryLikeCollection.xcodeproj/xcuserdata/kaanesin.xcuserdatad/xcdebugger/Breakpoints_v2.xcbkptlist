@@ -3,4 +3,22 @@
    uuid = "7CEDA2F4-FBA9-49E0-95C6-84374491CFE3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73E317B4-B099-4305-81B5-750B8426DFBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KEStoryLikeCollection/KEStoryLikeCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "prepareFlowLayout(cellWidth:cellHeight:scrollDirection:minimumLineSpacing:minimumInteritemSpacing:insetValue:backgroundColor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
