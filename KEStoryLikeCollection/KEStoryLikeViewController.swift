@@ -8,8 +8,12 @@
 
 import UIKit
 
-class KEStoryLikeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+protocol KEStoryLikeViewControllerDelegate: NSObject {
+    func cellDidSelect(item: (color: UIColor, title: String), indexPath: IndexPath)
+}
+
+class KEStoryLikeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, KEStoryLikeCellDelegate {
+
     @IBOutlet weak var collectionView: KEStoryLikeCollectionView!
     var itemArray: [(color: UIColor, title: String)]?
     var insetValue: CGFloat = 5.0
@@ -20,7 +24,8 @@ class KEStoryLikeViewController: UIViewController, UICollectionViewDelegate, UIC
     var isImageCircleOnCell: Bool = true
     var backgroundColor: UIColor = .lightGray
     var scrollDirection: UICollectionView.ScrollDirection = .horizontal
-
+    var delegate: KEStoryLikeViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +44,9 @@ class KEStoryLikeViewController: UIViewController, UICollectionViewDelegate, UIC
             cell.updateCellText()
             cell.imgCell.backgroundColor = item.color
             cell.updateCellImage(isImageCircle: isImageCircleOnCell)
+            cell.delegate = self
+            cell.tag = indexPath.row
+            cell.btnOnCell.tag = indexPath.row
         }
         return cell
     }
@@ -47,4 +55,15 @@ class KEStoryLikeViewController: UIViewController, UICollectionViewDelegate, UIC
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = itemArray?[indexPath.row] {
+            delegate?.cellDidSelect(item: item, indexPath: indexPath)
+        }
+    }
+    
+    func btnSelected(sender: UIButton) {
+        if let item = itemArray?[sender.tag] {
+            delegate?.cellDidSelect(item: item, indexPath: IndexPath(row: sender.tag, section: 0))
+        }
+    }
 }

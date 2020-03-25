@@ -7,16 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73E317B4-B099-4305-81B5-750B8426DFBE"
+            uuid = "0F9F9044-EEDC-40A4-BF51-D3A2E78F5B19"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KEStoryLikeCollection/KEStoryLikeCollectionView.swift"
+            filePath = "KEStoryLikeCollection/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "prepareFlowLayout(cellWidth:cellHeight:scrollDirection:minimumLineSpacing:minimumInteritemSpacing:insetValue:backgroundColor:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "cellDidSelect(item:indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "951D9AAD-4EFD-4B86-9C4A-205D600E887E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KEStoryLikeCollection/KEStoryLikeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D00A6F04-3486-46E4-8FA9-C7408998D683"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KEStoryLikeCollection/KEStoryLikeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "btnSelected(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

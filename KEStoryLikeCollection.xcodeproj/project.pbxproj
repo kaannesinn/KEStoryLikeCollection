@@ -14,6 +14,7 @@
 		828A56BA242A4F5200C806EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828A56B8242A4F5200C806EE /* LaunchScreen.storyboard */; };
 		828D9F33242B6F22002A3424 /* KEStoryLikeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828D9F32242B6F22002A3424 /* KEStoryLikeCollectionView.swift */; };
 		828D9F35242B72E9002A3424 /* KEStoryLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828D9F34242B72E9002A3424 /* KEStoryLikeCell.swift */; };
+		828D9F37242B7909002A3424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828D9F36242B7909002A3424 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		828A56BB242A4F5200C806EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828D9F32242B6F22002A3424 /* KEStoryLikeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEStoryLikeCollectionView.swift; sourceTree = "<group>"; };
 		828D9F34242B72E9002A3424 /* KEStoryLikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEStoryLikeCell.swift; sourceTree = "<group>"; };
+		828D9F36242B7909002A3424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				828A56B1242A4F5000C806EE /* KEStoryLikeViewController.swift */,
 				828D9F32242B6F22002A3424 /* KEStoryLikeCollectionView.swift */,
 				828D9F34242B72E9002A3424 /* KEStoryLikeCell.swift */,
+				828D9F36242B7909002A3424 /* ViewController.swift */,
 				828A56B3242A4F5000C806EE /* Main.storyboard */,
 				828A56B6242A4F5200C806EE /* Assets.xcassets */,
 				828A56B8242A4F5200C806EE /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828D9F37242B7909002A3424 /* ViewController.swift in Sources */,
 				828A56B2242A4F5000C806EE /* KEStoryLikeViewController.swift in Sources */,
 				828A56AE242A4F5000C806EE /* AppDelegate.swift in Sources */,
 				828D9F35242B72E9002A3424 /* KEStoryLikeCell.swift in Sources */,

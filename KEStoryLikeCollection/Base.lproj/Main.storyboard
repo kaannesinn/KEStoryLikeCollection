@@ -8,6 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="7xi-Ia-Ku4">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DF7-pd-CYB" customClass="ViewController" customModule="KEStoryLikeCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JeR-rF-jL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BuU-M8-zFu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btz-sM-iyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="-293"/>
+        </scene>
         <!--Story Like View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -49,12 +64,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-uk-cu9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="108"/>
+                                                    <connections>
+                                                        <action selector="btnCancel:" destination="qRg-Gm-S8E" eventType="touchCancel" id="D4e-43-i3R"/>
+                                                        <action selector="btnCancel:" destination="qRg-Gm-S8E" eventType="touchUpOutside" id="qHF-TZ-1YH"/>
+                                                        <action selector="btnCancel:" destination="qRg-Gm-S8E" eventType="touchDragExit" id="uHJ-Po-eYF"/>
+                                                        <action selector="btnCancel:" destination="qRg-Gm-S8E" eventType="touchDragOutside" id="wpA-y9-ndu"/>
+                                                        <action selector="btnClicked:" destination="qRg-Gm-S8E" eventType="touchUpInside" id="qDI-eq-KPK"/>
+                                                        <action selector="btnTouchDown:" destination="qRg-Gm-S8E" eventType="touchDragEnter" id="SWQ-0w-5AW"/>
+                                                        <action selector="btnTouchDown:" destination="qRg-Gm-S8E" eventType="touchDragInside" id="ZBO-dJ-Ee6"/>
+                                                        <action selector="btnTouchDown:" destination="qRg-Gm-S8E" eventType="touchDown" id="xRF-ck-q1V"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KTj-LF-nuy" firstAttribute="leading" secondItem="MPQ-1j-BZs" secondAttribute="leading" constant="10" id="BgK-WJ-Fc1"/>
                                                 <constraint firstItem="7zX-bo-ayX" firstAttribute="centerX" secondItem="MPQ-1j-BZs" secondAttribute="centerX" id="Can-pv-xLb"/>
+                                                <constraint firstItem="BbN-uk-cu9" firstAttribute="leading" secondItem="MPQ-1j-BZs" secondAttribute="leading" id="IW9-Yd-8V5"/>
                                                 <constraint firstItem="7zX-bo-ayX" firstAttribute="top" secondItem="KTj-LF-nuy" secondAttribute="bottom" constant="5" id="Mkp-WF-zu0"/>
+                                                <constraint firstItem="BbN-uk-cu9" firstAttribute="top" secondItem="MPQ-1j-BZs" secondAttribute="top" id="Msm-e4-vkq"/>
+                                                <constraint firstAttribute="trailing" secondItem="BbN-uk-cu9" secondAttribute="trailing" id="Q3M-Tn-aTH"/>
                                                 <constraint firstItem="7zX-bo-ayX" firstAttribute="leading" secondItem="MPQ-1j-BZs" secondAttribute="leading" constant="5" id="UcO-d5-ith"/>
+                                                <constraint firstAttribute="bottom" secondItem="BbN-uk-cu9" secondAttribute="bottom" id="XXF-HH-Ne0"/>
                                                 <constraint firstItem="KTj-LF-nuy" firstAttribute="centerX" secondItem="MPQ-1j-BZs" secondAttribute="centerX" id="YDz-Up-AxB"/>
                                                 <constraint firstItem="KTj-LF-nuy" firstAttribute="centerY" secondItem="MPQ-1j-BZs" secondAttribute="centerY" constant="-10" id="eDG-3W-jLs"/>
                                                 <constraint firstAttribute="bottom" secondItem="7zX-bo-ayX" secondAttribute="bottom" constant="5" id="fp0-va-Kfd"/>
@@ -62,6 +94,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="80" height="108"/>
                                         <connections>
+                                            <outlet property="btnOnCell" destination="BbN-uk-cu9" id="1N1-nq-ov8"/>
                                             <outlet property="constraintYForImage" destination="eDG-3W-jLs" id="pni-fh-NGD"/>
                                             <outlet property="imgCell" destination="KTj-LF-nuy" id="e5D-P0-lhi"/>
                                             <outlet property="lblCell" destination="7zX-bo-ayX" id="Y78-qH-Ceb"/>

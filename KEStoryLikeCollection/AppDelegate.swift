@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, KEStoryLikeViewControllerDelegate {
 
     var window: UIWindow?
     
@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "KEStoryLikeViewController") as? KEStoryLikeViewController {
+            vc.delegate = self
             vc.itemArray = [(color: UIColor.red, title: "1 sdfasdf"),
                             (color: UIColor.yellow, title: "2 asdklfj asdfjk"),
                             (color: UIColor.green, title: "3 a23r"),
@@ -28,11 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             (color: UIColor.purple, title: "8 230r9fjv sodfpoısdpfsdf"),
                             (color: UIColor.blue, title: "9 sakdf"),
                             (color: UIColor.cyan, title: "10 sdfasdf sdfasdf")]
-            window?.rootViewController = vc
+            window?.rootViewController = UINavigationController(rootViewController: vc)
         }
         window?.makeKeyAndVisible()
         return true
     }
 
+    func cellDidSelect(item: (color: UIColor, title: String), indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            if let navc = window?.rootViewController as? UINavigationController {
+                vc.view.backgroundColor = item.color
+                navc.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
